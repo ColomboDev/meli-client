@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.notProducts {
+  @include display();
+  background-color: $white-color;
+  padding: 42px 40px 32px;
+}
+
+.notProducts__image {
+  margin-right: 25px;
+}
+
+.notProducts__title {
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+}

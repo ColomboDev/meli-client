@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+  @include display();
+  background-color: $primary-color;
+  padding: 10px;
+}
+
+.header__logo {
+  height: 40px;
+  width: 60px;
+}
+
+.form {
+  @include display();
+  max-width: 600px;
+  width: 100%;
+  height: 40px;
+}
+
+.form__input {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+  border-radius: 2px;
+  background-color: $white-color;
+  border: 0 rgba(0, 0, 0, 0.2);
+  padding: 0 10px 0 15px;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.form__button {
+  background-color: $white-color;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+  border: 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  padding: 0;
+  width: 46px;
+  height: 100%;
+}
+
+.form__image {
+  width: 15px;
+  height: 15px;
+}
