@@ -4,7 +4,8 @@ const api = process.env.REACT_APP_URL_API;
 export const searchProduct = async (searchText) => {
   try {
     const response = await axios.get(`${api}items?q=${searchText}`);
-    return response;
+    const { data } = response;
+    return data;
   } catch (error) {
     console.error(error);
   }
@@ -13,7 +14,8 @@ export const searchProduct = async (searchText) => {
 export const getProductById = async (id) => {
   try {
     const response = await axios.get(`${api}items/${id}`);
-    return response;
+    const { data } = response;
+    return data;
   } catch (error) {
     console.error(error);
   }

@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.DetailsProduct {
+  @include display(column);
+  width: 100%;
+  max-width: 60%;
+  margin: 20px 0;
+}
+
+.DetailsProduct__content {
+  background-color: $white-color;
+  padding: 20px 40px;
+}
+
+.DetailsProduct__firstContent {
+  @include display(null, flex-start, space-around);
+  width: 100%;
+}
+
+.DetailsProduct__image {
+  width: 90%;
+  margin-right: 40px;
+}
+
+.DetailsProduct__condition {
+  font-size: $font-size-xs;
+  margin-bottom: 15px;
+}
+
+.DetailsProduct__title {
+  margin-bottom: 10px;
+}
+
+.DetailsProduct__price {
+  font-size: $font-size-xl;
+  margin-bottom: 50px;
+}
+
+.DetailsProduct__button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  color: $white-color;
+  background-color: $blue-color;
+  font-size: $font-size-s;
+  cursor: pointer;
+  outline: 0;
+}
+
+.information {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.information_title {
+  margin-bottom: 20px;
+  font-size: $font-size-l;
+}
+
+.information_text {
+  font-size: $font-size-xs;
+  white-space: pre-line;
+}
+
+@media (max-width: $media-lg) {
+  .DetailsProduct__firstContent {
+    @include display(column, flex-start, space-around);
+  }
+  .DetailsProduct__image {
+    width: 100%;
+    margin-right: 0;
+  }
+}

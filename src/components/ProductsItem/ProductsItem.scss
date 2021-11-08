@@ -1,0 +1,84 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.productsItem {
+  @include display(null, flex-start, flex-start);
+  text-decoration: none;
+  padding: 15px;
+  border-bottom: 1px solid $grey-color;
+}
+
+.productsItem_content {
+  @include display(null, null, flex-start);
+  width: 100%;
+}
+
+.productsItem__image {
+  width: 20%;
+  height: 20%;
+  margin-right: 10px;
+}
+
+.description {
+  @include display(column, flex-start, flex-start);
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+
+.description__priceAndCity {
+  @include display(null, center, space-between);
+  width: 100%;
+}
+
+.price {
+  @include display();
+}
+
+.price__text {
+  color: $black-color;
+  font-size: $font-size-l;
+}
+
+.price__freeShipping {
+  margin-left: 10px;
+}
+
+.description__city {
+  color: $black-color;
+  font-size: $font-size-xs;
+}
+
+.description__text {
+  color: $black-color;
+  font-size: $font-size-s;
+  margin-top: 10px;
+}
+
+@media (max-width: $media-md) {
+  .productsItem_content {
+    @include display(column);
+  }
+  .description__priceAndCity {
+    @include display(column, flex-start);
+  }
+  .productsItem__image {
+    width: 70%;
+    margin-right: 0;
+  }
+  .price {
+    @include display(null, center, flex-start);
+    margin-bottom: 10px;
+  }
+  .price__text {
+    font-size: $font-size-m;
+  }
+  .price__freeShipping {
+    width: 25%;
+  }
+  .description__city {
+    font-size: $font-size-xxs;
+  }
+  .description__text {
+    font-size: $font-size-xs;
+  }
+}

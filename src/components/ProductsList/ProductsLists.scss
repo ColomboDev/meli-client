@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.productsLists {
+  width: 100%;
+  max-width: 90%;
+  margin: 20px 40px;
+}
+
+.productsLists__content {
+  background-color: $white-color;
+}
+
+@media (max-width: $media-md) {
+  .productsLists {
+    max-width: none;
+  }
+}

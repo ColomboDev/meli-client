@@ -3,6 +3,11 @@
 
 .notProducts {
   @include display();
+  @include heightCalc();
+}
+.notProducts__content {
+  @include display();
+  width: 100%;
   background-color: $white-color;
   padding: 42px 40px 32px;
 }

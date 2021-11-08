@@ -11,14 +11,14 @@
   height: 30%;
 }
 
-@media (min-width: $media-xs) {
+@media (max-width: $media-xs) {
   .home__image {
     width: 90%;
     height: 30%;
   }
 }
 
-@media (min-width: $media-lg) {
+@media (max-width: $media-lg) {
   .home__image {
     width: 70%;
     height: 30%;

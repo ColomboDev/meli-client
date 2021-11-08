@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.breadcrumb {
+  @include display(null, null, flex-start);
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.breadcrumb__title {
+  font-weight: $font-weight-bold;
+}
+
+.breadcrumb__path {
+  font-size: $font-size-xs;
+  color: $grey-color-1;
+}
+
+.breadcrumb__category {
+  color: $grey-color-1;
+}
