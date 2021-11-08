@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { getProductById } from "services/products";
 import { useNavigate } from "react-router";
 import { formatPrice } from "utils/functions";
+import { Helmet } from "react-helmet";
 import Layout from "components/Layout";
 import Breadcrumb from "components/Breadcrumb";
 import "./DetailsProduct.scss";
@@ -48,44 +49,55 @@ const DetailsProduct = () => {
     sold_quantity > 0 ? `- ${sold_quantity} vendidos` : "";
 
   return (
-    product && (
-      <Layout showLoader={loader}>
-        <div className="DetailsProduct">
-          <Breadcrumb type={"path"} categories={product.categories} />
-          <div className="DetailsProduct__content">
-            <div className="DetailsProduct__firstContent">
-              <img
-                className="DetailsProduct__image"
-                src={product.picture}
-                alt="foto del producto"
-              />
-              <div>
-                <p className="DetailsProduct__condition">{`${formatedCondition(
-                  product.condition
-                )} ${formatedSoldQuantity(product.sold_quantity)}`}</p>
-                <h2 className="DetailsProduct__title">{product.title}</h2>
-                <h2 className="DetailsProduct__price">
-                  {formatPrice(product.price.amount)}
-                </h2>
-                <button
-                  className="DetailsProduct__button"
-                  aria-label="comprar el prodcuto"
-                  onClick={() => console.log("navegar a comprar el prodcuto")}
-                >
-                  <span>Comprar</span>
-                </button>
+    <Layout showLoader={loader}>
+      {product && (
+        <>
+          <Helmet>
+            <title> {product.title} | Mercado Libre</title>
+            <meta
+              name="description"
+              content={` Detalle del producto ${product.title} `}
+            />
+          </Helmet>
+          <div className="DetailsProduct">
+            <Breadcrumb type={"path"} categories={product.categories} />
+            <div className="DetailsProduct__content">
+              <div className="DetailsProduct__firstContent">
+                <img
+                  className="DetailsProduct__image"
+                  src={product.picture}
+                  alt="foto del producto"
+                />
+                <div>
+                  <p className="DetailsProduct__condition">{`${formatedCondition(
+                    product.condition
+                  )} ${formatedSoldQuantity(product.sold_quantity)}`}</p>
+                  <h2 className="DetailsProduct__title">{product.title}</h2>
+                  <h2 className="DetailsProduct__price">
+                    {formatPrice(product.price.amount)}
+                  </h2>
+                  <button
+                    className="DetailsProduct__button"
+                    aria-label="comprar el prodcuto"
+                    onClick={() => console.log("navegar a comprar el prodcuto")}
+                  >
+                    <span>Comprar</span>
+                  </button>
+                </div>
               </div>
+              {product.description && (
+                <div className="information">
+                  <h2 className="information_title">
+                    Descripción del producto
+                  </h2>
+                  <p className="information_text">{product.description}</p>
+                </div>
+              )}
             </div>
-            {product.description && (
-              <div className="information">
-                <h2 className="information_title">Descripción del producto</h2>
-                <p className="information_text">{product.description}</p>
-              </div>
-            )}
           </div>
-        </div>
-      </Layout>
-    )
+        </>
+      )}
+    </Layout>
   );
 };
 

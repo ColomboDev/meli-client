@@ -7,20 +7,13 @@
 }
 
 .home__image {
-  width: 80%;
+  width: 50%;
   height: 30%;
 }
 
 @media (max-width: $media-xs) {
   .home__image {
     width: 90%;
-    height: 30%;
-  }
-}
-
-@media (max-width: $media-lg) {
-  .home__image {
-    width: 70%;
-    height: 30%;
+    height: 20%;
   }
 }

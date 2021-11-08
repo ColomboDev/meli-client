@@ -1,5 +1,5 @@
 import axios from "axios";
-const api = process.env.REACT_APP_URL_API;
+const api = process.env.REACT_APP_URL_API || "http://localhost:5000/api/";
 
 export const searchProduct = async (searchText) => {
   try {
