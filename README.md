@@ -1,3 +1,5 @@
+# <img src="./src/assets/logo_mercado_libre.jpeg" alt="Logo" height="30px" > Mercado Libre por [@ColomboDev](https://www.linkedin.com/in/martin-colombo-378934163/)
+
 Aplicación: https://meli-client-colombodev.vercel.app/<br/>
 
 ## Desarrollado con:
