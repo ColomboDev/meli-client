@@ -64,6 +64,15 @@
   white-space: pre-line;
 }
 
+@media (max-width: $media-md) {
+  .DetailsProduct {
+    max-width: 90%;
+  }
+  .DetailsProduct__condition {
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: $media-lg) {
   .DetailsProduct__firstContent {
     @include display(column, flex-start, space-around);
