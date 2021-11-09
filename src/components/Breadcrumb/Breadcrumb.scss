@@ -19,3 +19,9 @@
 .breadcrumb__category {
   color: $grey-color-1;
 }
+
+@media (max-width: $media-md) {
+  .breadcrumb {
+    display: none;
+  }
+}
